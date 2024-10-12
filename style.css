@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(47, 44, 44);
+  color: #fff;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  /* background:  rgb(64, 62, 62); */
+  background-image: url(./assets/images/potfolio-background.png);
+}
+
+
+
+.container {
+  padding: 10px 10%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #cdb4db;
+  /* background-color: rgb(47, 44, 44) */
+  /* background-color: #a778b0; */
+}
+
+.logo {
+  width: 60px;
+  border-radius: 50px;
+  margin-left: 2rem;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #9f86c0;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 10%;
+  margin-right: 10%;
+  font-size: 30px;
+  text-align: center; /* Change to left for better alignment */
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Align items vertically centered */
+ 
+}
+
+.header-text img {
+ margin-right: px;
+}
+
+
+  .text-content {
+ 
+    margin: 0 auto; /* Automatically adjust left/right margins */
+    text-align: center; /* Center text within the content */
+}
+
+
+
+.header-text h1 {
+  font-family: "Caveat Brush", cursive;
+  font-size: 60px;
+  margin-top: 20px;
+  animation: 2s slide-right;
+  animation-delay: 2s;
+}
+
+.header-text h1 span {
+  font-family: "Caveat Brush", cursive;
+  color: #a05faa;
+}
+
+.header-text p {
+  font-family: "Caveat Brush", cursive;
+}
+
+/* ----------------about------------------ */
+
+#about {
+  padding: 80px 0;
+  color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 80%;
+  border-radius: 25px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Caveat Brush", cursive;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #b67ec0;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #e8c7ee;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* ------------------skills---------------- */
+
+#skills {
+  padding: 30px 0;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.skills-list div {
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 50px;
+}
+
+.skills-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.skills-list div {
+  background: #b67ec0;
+  transform: translateY(-10px);
+}
+
+/*----------------------------Hobbies---------------------*/
+
+#hobbies {
+  padding: 30px 0;
+}
+
+.hobbies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.hobbies-list div {
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 50px;
+  background: #957d9a;
+  transform: translateY(-10px);
+}
+
+.hobbies-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/*-------------------------projects-----------------------*/
+
+#projects {
+  padding: 30px 0;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.projects-list div {
+  padding: 40px;
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 50px;
+}
+
+.projects-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.projects-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.projects-list div {
+  background: #5e4063;
+  transform: translateY(-10px);
+}
+
+.center-content {
+  text-align: center;
+}
+
+.btn {
+ 
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid#B67EC0;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+  margin-right: 15px;
+}
+
+.btn:hover {
+  background: #b67ec0;
+}
+
+.see_btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid#B67EC0;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.see_btn:hover {
+  background: #b67ec0;
+}
+/*-----------------------Contact-------------------------*/
+
+#contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-left p i {
+  color: #b67ec0;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #b67ec0;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #b67ec0;
+  text-align: center;
+}
+
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+
+/* ----------------------css for mobile and tablet------------------- */
+nav .fa-solid {
+  display: none;
+}
+
+
+/* For Google Nest Hub and similar devices */
+@media (max-width: 1024px) and (max-height: 600px) {
+  .header-text {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text */
+  }
+
+  .btn {
+      margin: 10px 0; /* Add vertical spacing between buttons */
+      width: auto; /* Adjust button width */
+      display: block;
+  }
+
+  .text-content {
+      padding: 0 1rem; /* Add some padding for better spacing */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* #header{
+        background-image: url(images/phone-background.png);
+    } */
+  .header-text {
+    margin-top: 40%;
+    font-size: 20px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+    padding-right: 1rem;
+  }
+  nav ul {
+    background: #b67ec0;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+  .btn {
+    margin: 10px 0; /* Add vertical spacing between buttons */
+    width: 100%; /* Optional: Make buttons full width */
+    display: block;
+    margin-right: 1px;
+}
+ 
+}
+
+@media (max-width: 768px) {
+
+  .d-flex {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    margin-bottom: 2rem;
+}
+
+.btn {
+    margin: 10px 0; /* Add vertical spacing between buttons */
+    width: 100%; /* Optional: Make buttons full width */
+}
+  .header-text {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text */
+  }
+
+  .header-text img {
+      margin-top: 20px; /* Add some space between text and image */
+      height: 250px; /* Adjust image size for smaller screens */
+  }
+
+  .text-content {
+      max-width: 100%; /* Allow text to use full width */
+      margin: 0; /* Remove margins for smaller screens */
+  }
+}
+
+/* For extra-small screens (mobile phones) */
+@media (max-width: 480px) {
+  .header-text {
+      margin-top: 5%; /* Adjust top margin */
+  }
+
+  .header-text h1 {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .header-text p {
+      font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .btn {
+      font-size: 1rem; /* Adjust button font size */
+      padding: 10px 20px; /* Adjust button padding */
+      /* display: block; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .header-text {
+      flex-direction: row; /* Row layout */
+      justify-content: space-around; /* Space between elements */
+  }
+  .btn {
+      margin: 0 10px; /* Space between buttons */
+  }
+}
+ 
+@media (min-width: 576px) and (max-width: 768px) {
+  .header-text {
+      flex-direction: column; /* Stack elements */
+      text-align: center; /* Center text */
+  }
+  .btn {
+      margin: 10px 0; /* Space between buttons */
+      width: auto; /* Adjust button width */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header-text {
+        flex-direction: row; /* Keep elements in a row */
+        justify-content: space-between; /* Space out elements */
+    }
+    .btn {
+        margin: 0 15px; /* Adjust button spacing */
+    }
+}
+
+/* For iPad Air in portrait mode */
+@media (max-width: 820px) and (max-height: 1180px) {
+  .header-text {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text */
+  }
+
+  .btn {
+      margin: 10px 0; /* Add vertical spacing between buttons */
+      width: 100%; /* Optional: Make buttons full width */
+      margin-bottom: 2rem;
+  }
+
+  .btn_space {
+    padding-bottom: 2rem;
+  }
+
+  .text-content {
+      padding: 0 1rem; /* Add padding for better spacing */
+  }
+
+  .profile_img {
+    margin-top: 10rem;
+  }
+ 
+}
+
+/* For iPad Air in portrait mode */
+@media (max-width: 853px) and (max-height: 1280px) {
+  .header-text {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text */
+  }
+
+  .btn {
+      margin: 10px 0; /* Add vertical spacing between buttons */
+      width: 100%; /* Optional: Make buttons full width */
+  }
+
+  .text-content {
+      padding: 0 1rem; /* Add padding for better spacing */
+  }
+
+  .profile_img {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .header-text {
+    margin-top: 5%; /* Adjust top margin */
+}
+
+.header-text h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+}
+
+.header-text p {
+    font-size: 1rem; /* Adjust font size */
+}
+
+
+.btn {
+  margin: 10px 0; 
+  width: 60%; 
+}
+
+}
+
+
+  @media (min-width: 912px) and (max-width: 1368px) {
+    .d-flex {
+        display: flex; /* Make sure the container uses flexbox */
+        flex-direction: row; /* Align items in a row */
+        justify-content: center; /* Center the buttons horizontally */
+    }
+  
+    .btn {
+        margin: 10px; /* Add horizontal spacing between buttons */
+    }
+}
+
+
+
+#msg {
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
+
+/* ------------------------Animation------------------------- */
+
+slide-right {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 400px;
+  max-width: 500px;
+}
+
+.slide-right h2 {
+  animation: 2s slide-right;
+  animation-delay: 2s;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -600px;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

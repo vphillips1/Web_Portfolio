@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="type">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d23da551d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <nav>
+          <img src="./assets/images/logo.png" class="logo" />
+          <ul id="sidemenu">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="container">
+          <div class="header-text slide-right d-flex align-items-center"> <!-- Add d-flex here -->
+              <div class="text-content"> <!-- Wrap text content for better layout -->
+                  <div class="fs-3 fw-light text-muted">Journey Through My Work</div>
+                  <h1>Hi,&nbsp;I'm&nbsp;<span>Verkeia&nbsp;Foley</span></h1>
+                  <p style="font-size: 3rem; margin-bottom: 3rem;">Software Engineer</p>
+                  <div class="d-flex justify-content-center mb-3 btn_space">
+                      <a href ="https://vphillips1.github.io/My-Resume/" class="btn btn-primary btn-lg px-5 py-3 me-3 fs-6 fw-bolder">Resume</a>
+                      <a href="#projects" class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder">Projects</a>
+                  </div>
+              </div>
+              <img class ="profile_img" src="./assets/images/profilepic.jpeg" height="350" style="border-radius: 50%; border: 3px solid black; outline: 5px solid #b67ec0;" alt="profilepic"> <!-- Move image here -->
+          </div>
+      </div>
+  </div>
+  
+  
+   
+    </div>
+    <!-- -------------about----------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./assets/images/aboutme-img.jpeg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A Software Engineer driven by a deep passion for creating reliable
+              applications. Applies logical thinking in software development to
+              enhance scalability within user interface applications. Identify
+              potential risks when creating websites and prioritize protecting
+              people while adhering to laws and regulations. Possesses a
+              self-driven, team-oriented, and adaptable demeanor, always ready
+              to deliver exceptional experiences for end-users. Recognized for
+              having a positive mindset and commitment to continuous learning
+              and personal growth. Excels in environments that prioritize both
+              collaborative teamwork and individual contributions, consistently
+              striving for excellence and innovation.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('certification')">
+                Certifications
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Devlopment</span><br />
+                  Create applications using HTML, CSS, Javascript
+                </li>
+                <li><span>Backend Development</span><br />Create applications using C# .Net</li>
+                <li>
+                  <span>Cybersecurity</span><br />Experience with security frameworks, security policy, and network security
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2024 - Present</span><br />ITS Service Desk Technician at University of Michigan
+                </li>
+                <li>
+                  <span>2021 - 2023</span><br />Associate Software Engineer at Rocket Central
+                </li>
+                <li><span>2021 - 2021</span><br />Associate Software Engineer at Rocket Mortgage</li>
+                <li>
+                  <span>2019 - 2021</span><br />Team Leader at Rocket Mortgage
+                </li>
+                <li>
+                  <span>2016 - 2019</span><br />President Club Verification Specialist at Rocket Mortgage
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2025 - Present</span><br />
+                  Bachelors of Science in Computer Science from University of Michigan-Dearborn
+                </li>
+                <li>
+                  <span>2015 - 2017</span><br />Associate of Arts in Human Resources Management from
+                  Community College of the Air Force
+                </li>
+                <li>
+                  <span>2010 - 2015</span><br />Bachelors Degree in Psychology from
+                  University of Michigan-Dearborn
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="certification">
+              <ul>
+                <li>
+                  <span>2024</span><br />
+                  Security+ Ceritifcation from CompTIA.org
+                </li>
+                <li>
+                  <span>2023</span><br />Google Cybersecurity Certification from Coursera.org
+                </li>
+                <li>
+                  <span>2023</span><br />FullStack Development Certification from Master Polyglots
+                </li>
+                <li>
+                  <span>2020 - 2021</span><br /> C# .Net Certification from Grand Circus
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----------------------skills------------------->
+    <div id="skills">
+      <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+          <div>
+            <h2>Web Development</h2>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Angular</li>
+              <li>Typescript</li>
+              <li>Javascript</li>
+              <li>C#</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Backend Development</h2>
+            <ul>
+              <li>C#</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>Git</li>
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Communication</li>
+            </ul>
+  
+          </div>
+          <div>
+            <h2>Cybersecurity</h2>
+           <ul>
+            <li>Security Frameworks, controls, design principles</li>
+            <li>Network Security</li>
+            <li>Linux line-command</li>
+            <li>Organizational risk management</li>
+            <li>Security Policy</li>
+            <li>Programming (SQL, Python)</li>
+          
+           </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------Hobbies--------------------->
+    <div id="hobbies">
+        <div class="container">
+          <h1 class="sub-title">My Hobbies</h1>
+          <div class="hobbies-list">
+            <div>
+              <h2>Creative</h2>
+           <ul>
+            <li>Cooking</li>
+            <li>Singing</li>
+            <li>Writing</li>
+            <li>Coloring Book Publisher</li>
+  
+           </ul>
+            </div>
+            <div>
+              <h2>Outdoor</h2>
+          <ul>
+            <li>Gardening</li>
+            <li>Planting Flowers</li>
+            <li>Fishing</li>
+            <li>Nature walks</li>
+            <li>Kayaking</li>
+          </ul>
+            </div>
+            <div>
+              <h2>Social</h2>
+          <ul>
+            <li>Volutnteering</li>
+            <li>Participating in community activities</li>
+          </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ----------------------------projects-------------------- !-->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+          <div class="center-content">
+            <h2>Motivational Meme</h2>
+            <img src="./assets/images/motivation.png" height="100" alt="motivation-img">
+            <p>
+              Created a motivational meme for encouragement and positivity. I wanted to do a mini meme project because I usually add motivational laptop backgrounds to my computer. 
+            </p>
+            <a href="https://vphillips1.github.io/Motivational-Meme-Project/">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Personal Website</h2>
+            <img src="./assets/images/personal-website.png" height="100" alt="personal-site">
+            <p>
+              I created a personal blogging website to discuss about the latest trending products. I am still working on this project. Planning on updating the styles and adding more content. 
+            </p>
+            <a href="https://vphillips1.github.io/My-Blog/index.html">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Cybersecurity</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Donuts and Devs</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Movie App</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Quick Scheduler</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Weather Wonders</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Angular Social Posts</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Slack Overload</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+          <div class="center-content">
+            <h2>Shopping List</h2>
+            <img src="./assets/images/cybersecurity-img.jpeg" height="100" alt="cybersecurity-img">
+            <p>
+             I created a portfolio website to show off my cybersecurity projects in google sites.
+            </p>
+            <a href="https://sites.google.com/view/vfcsportfolio/home">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see_btn">See more</a>
+    </div>
+     
+      <!----------------------Contact-------------------->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>verkeiap@gmail.com</p></a>
+              <div class="social-icons">
+                <a href="https://facebook.com/"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/verkeia-foley/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/vphillips1"><i class="fa-brands fa-github"></i></a>
+              </div>
+          
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+     
+      <footer class="copyright">
+        <small>
+          Copyright © Verkeia Foley. All Rights Reserved.
+        </small>
+      </footer>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+
+</html>
