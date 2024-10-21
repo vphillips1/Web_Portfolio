@@ -19,7 +19,6 @@ body {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  /* background:  rgb(64, 62, 62); */
   background-image: url(./assets/images/potfolio-background.png);
 }
 
@@ -34,9 +33,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #cdb4db;
-  /* background-color: rgb(47, 44, 44) */
-  /* background-color: #a778b0; */
 }
 
 .logo {
@@ -49,6 +45,7 @@ nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
+  padding-top: 2rem;
 }
 
 nav ul li a {
@@ -77,23 +74,18 @@ nav ul li a:hover::after {
   margin-top: 10%;
   margin-right: 10%;
   font-size: 30px;
-  text-align: center; /* Change to left for better alignment */
-  display: flex; /* Make it a flex container */
-  align-items: center; /* Align items vertically centered */
+  text-align: center; 
+  display: flex; 
+  align-items: center; 
  
 }
 
-.header-text img {
- margin-right: px;
-}
 
-
-  .text-content {
+.text-content {
  
     margin: 0 auto; /* Automatically adjust left/right margins */
     text-align: center; /* Center text within the content */
 }
-
 
 
 .header-text h1 {
@@ -205,12 +197,6 @@ nav ul li a:hover::after {
   margin-top: 50px;
 }
 
-.skills-list div {
-  padding: 40px;
-  font-size: 20px;
-  font-weight: 300;
-  border-radius: 50px;
-}
 
 .skills-list div h2 {
   font-size: 30px;
@@ -241,7 +227,7 @@ nav ul li a:hover::after {
   font-size: 20px;
   font-weight: 300;
   border-radius: 50px;
-  background: #957d9a;
+  background: linear-gradient(to right,  rgb(163, 131, 174), rgb(161, 104, 166) , rgb(97, 11, 124));
   transform: translateY(-10px);
 }
 
@@ -257,10 +243,18 @@ nav ul li a:hover::after {
   padding: 30px 0;
 }
 
+
+
+.projects-carousel {
+  position: relative;
+  overflow: hidden; 
+  max-width: 1300px; 
+  margin: 0 auto; /
+}
+
 .projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
+  display: flex; 
+  transition: transform 0.5s ease; 
   margin-top: 50px;
 }
 
@@ -286,19 +280,47 @@ nav ul li a:hover::after {
 }
 
 .projects-list div {
-  background: #5e4063;
+  background: linear-gradient(to right, #b687be, #5e4063); 
   transform: translateY(-10px);
 }
 
 .center-content {
+  flex: 0 0 calc(33.33% - 40px); 
+  padding: 20px;
+  background: #5e4063;
+  border-radius: 10px;
+  margin: 0 20px;
+  box-sizing: border-box; 
   text-align: center;
 }
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10; 
+  color: white;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
 
 .btn {
  
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid#B67EC0;
+  border: 2px solid#B67EC0;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -315,7 +337,7 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid#B67EC0;
+  border: 1px solid#c573c5;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -341,9 +363,9 @@ nav ul li a:hover::after {
 
 .social-icons {
   margin-top: 30px;
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .social-icons a {
@@ -366,6 +388,21 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
+.send_btn {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+  border: 4px solid #457b9d;
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.send_btn:hover {
+  background: #b67ec0;
+}
 
 .copyright {
   width: 100%;
@@ -380,42 +417,34 @@ nav ul li a:hover::after {
 /* ----------------------css for mobile and tablet------------------- */
 nav .fa-solid {
   display: none;
-}
-
-
-/* For Google Nest Hub and similar devices */
-@media (max-width: 1024px) and (max-height: 600px) {
-  .header-text {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center text */
-  }
-
-  .btn {
-      margin: 10px 0; /* Add vertical spacing between buttons */
-      width: auto; /* Adjust button width */
-      display: block;
-  }
-
-  .text-content {
-      padding: 0 1rem; /* Add some padding for better spacing */
-  }
+  padding-right: 2rem;
 }
 
 @media only screen and (max-width: 600px) {
-  /* #header{
-        background-image: url(images/phone-background.png);
-    } */
+
+.container {
+  padding: 2% 3%;
+}
   .header-text {
-    margin-top: 40%;
+    margin-top: 20%;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .header-text h1 {
     font-size: 40px;
   }
+
+  .header-text img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 3rem;
+
+  }
   nav .fa-solid {
     display: block;
     font-size: 25px;
-    padding-right: 1rem;
   }
   nav ul {
     background: #b67ec0;
@@ -456,6 +485,18 @@ nav .fa-solid {
     font-size: 16px;
     margin-right: 20px;
   }
+  
+  .center-content {
+  
+    overflow: hidden;
+    flex: 1 0 90%;
+    padding: 0px 10px;
+  
+  }
+
+  .projects-list div {
+    padding: 20px;
+  }
   .contact-left,
   .contact-right {
     flex-basis: 100%;
@@ -463,177 +504,138 @@ nav .fa-solid {
   .copyright {
     font-size: 14px;
   }
-  .btn {
-    margin: 10px 0; /* Add vertical spacing between buttons */
-    width: 100%; /* Optional: Make buttons full width */
-    display: block;
-    margin-right: 1px;
-}
- 
-}
-
-@media (max-width: 768px) {
-
-  .d-flex {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons */
-    margin-bottom: 2rem;
-}
-
-.btn {
-    margin: 10px 0; /* Add vertical spacing between buttons */
-    width: 100%; /* Optional: Make buttons full width */
-}
-  .header-text {
-      flex-direction: column; /* Stack items vertically */
-      text-align: center; /* Center text */
-  }
-
-  .header-text img {
-      margin-top: 20px; /* Add some space between text and image */
-      height: 250px; /* Adjust image size for smaller screens */
-  }
-
-  .text-content {
-      max-width: 100%; /* Allow text to use full width */
-      margin: 0; /* Remove margins for smaller screens */
-  }
-}
-
-/* For extra-small screens (mobile phones) */
-@media (max-width: 480px) {
-  .header-text {
-      margin-top: 5%; /* Adjust top margin */
-  }
-
-  .header-text h1 {
-      font-size: 2.5rem; /* Adjust font size for smaller screens */
-  }
-
-  .header-text p {
-      font-size: 1.5rem; /* Adjust font size */
-  }
 
   .btn {
-      font-size: 1rem; /* Adjust button font size */
-      padding: 10px 20px; /* Adjust button padding */
-      /* display: block; */
+    padding: 10px 15px;
+    margin: 0 5px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
-  .header-text {
-      flex-direction: row; /* Row layout */
-      justify-content: space-around; /* Space between elements */
-  }
-  .btn {
-      margin: 0 10px; /* Space between buttons */
-  }
-}
- 
-@media (min-width: 576px) and (max-width: 768px) {
-  .header-text {
-      flex-direction: column; /* Stack elements */
-      text-align: center; /* Center text */
-  }
-  .btn {
-      margin: 10px 0; /* Space between buttons */
-      width: auto; /* Adjust button width */
-  }
-}
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (max-width: 915px) {
+  .container {
+    padding: 2% 3%;
+  }
     .header-text {
-        flex-direction: row; /* Keep elements in a row */
-        justify-content: space-between; /* Space out elements */
+      margin-top: 20%;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .btn {
-        margin: 0 15px; /* Adjust button spacing */
-    }
-}
-
-/* For iPad Air in portrait mode */
-@media (max-width: 820px) and (max-height: 1180px) {
-  .header-text {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center text */
-  }
-
-  .btn {
-      margin: 10px 0; /* Add vertical spacing between buttons */
-      width: 100%; /* Optional: Make buttons full width */
-      margin-bottom: 2rem;
-  }
-
-  .btn_space {
-    padding-bottom: 2rem;
-  }
-
-  .text-content {
-      padding: 0 1rem; /* Add padding for better spacing */
-  }
-
-  .profile_img {
-    margin-top: 10rem;
-  }
- 
-}
-
-/* For iPad Air in portrait mode */
-@media (max-width: 853px) and (max-height: 1280px) {
-  .header-text {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center text */
-  }
-
-  .btn {
-      margin: 10px 0; /* Add vertical spacing between buttons */
-      width: 100%; /* Optional: Make buttons full width */
-  }
-
-  .text-content {
-      padding: 0 1rem; /* Add padding for better spacing */
-  }
-
-  .profile_img {
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 1024px) and (max-height: 600px) {
-  .header-text {
-    margin-top: 5%; /* Adjust top margin */
-}
-
-.header-text h1 {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
-}
-
-.header-text p {
-    font-size: 1rem; /* Adjust font size */
-}
-
-
-.btn {
-  margin: 10px 0; 
-  width: 60%; 
-}
-
-}
-
-
-  @media (min-width: 912px) and (max-width: 1368px) {
-    .d-flex {
-        display: flex; /* Make sure the container uses flexbox */
-        flex-direction: row; /* Align items in a row */
-        justify-content: center; /* Center the buttons horizontally */
+    .header-text h1 {
+      font-size: 40px;
     }
   
-    .btn {
-        margin: 10px; /* Add horizontal spacing between buttons */
+    .header-text img {
+      max-width: 150px;
+      height: auto;
+      margin-top: 3rem;
+  
     }
+    nav .fa-solid {
+      display: block;
+      font-size: 25px;
+    }
+    nav ul {
+      background: #b67ec0;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      z-index: 2;
+      transition: right 0.5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 25px;
+    }
+    nav ul .fa-solid {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+    }
+  
+    .sub-title {
+      font-size: 40px;
+    }
+    .about-col-1,
+    .about-col-2 {
+      flex-basis: 100%;
+    }
+    .about-col-1 {
+      margin-bottom: 30px;
+    }
+    .about-col-2 {
+      font-size: 14px;
+    }
+    .tab-links {
+      font-size: 16px;
+      margin-right: 20px;
+    }
+    
+     
+  .center-content {
+  
+    overflow: hidden;
+    flex: 1 0 90%;
+    padding: 0px 10px;
+  
+  }
+
+  .projects-list div {
+    padding: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    margin: 0 5px;
+  }
+
 }
 
+@media (min-width: 768px) and (max-width: 1368px) {
+
+  .header-text img {
+    max-width: 210px;
+    height: auto;
+    margin-top: 3rem;
+
+  }
+  .center-content {
+  
+    overflow: hidden;
+    flex: 0 0 calc(46.33% - 7px); 
+    padding: 0px 10px;
+  
+  }
+
+  .projects-list div {
+    padding: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    margin: 0 5px;
+  }
+}
 
 
 #msg {
@@ -641,7 +643,6 @@ nav .fa-solid {
   margin-top: -40px;
   display: block;
 }
-
 /* ------------------------Animation------------------------- */
 
 slide-right {
